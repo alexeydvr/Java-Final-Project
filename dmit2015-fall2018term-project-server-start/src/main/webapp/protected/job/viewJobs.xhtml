@@ -1,0 +1,62 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui"
+	xmlns:hf="http://highfaces.org"
+	template="/WEB-INF/templates/template-assignment02.xhtml">
+
+	<ui:param name="title" value="Job - View All" />
+
+	<ui:define name="maincontent">
+
+		<b:jumbotron>
+			<h1>List of all JOB</h1>
+		</b:jumbotron>
+
+		<b:messages id="messages" />
+		
+		<b:form>
+	
+			<b:commandButton value="Create Job Detail Form" 
+				icon-awesome="link"
+				action="createJob?faces-redirect=true">
+			</b:commandButton>
+			
+			<b:dataTable id="job" 
+				value="#{jobs}"
+				var="currentJob">
+				
+				<b:dataTableColumn label="JobID" 
+					value="#{currentJob.jobId}" />
+				
+				<b:dataTableColumn label="Job Title" 
+					value="#{currentJob.jobTitle}" />
+				
+				<b:dataTableColumn label="Minimum Salary" 
+					value="#{of:formatCurrency(currentJob.minSalary,'$')}" 
+					styleClass="text-right"/>
+				
+				<b:dataTableColumn label="Maximum Salary" 
+					value="#{of:formatCurrency(currentJob.maxSalary,'$')}" 
+					styleClass="text-right" />
+				
+				<b:dataTableColumn label="Action">
+					<b:link id="editLink" outcome="editJob"  icon-awesome="edit" icon-size="lg">
+						<f:param name="id" value="#{currentJob.jobId}" />
+						edit
+					</b:link>
+				</b:dataTableColumn>
+				
+			</b:dataTable>
+		
+		</b:form>
+
+
+	</ui:define>
+
+</ui:composition>

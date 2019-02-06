@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.168.73.128:8080/dmit2015-fall2018term-assignment05-server-start/HumanResourceService?wsdl" filename="HumanResourceService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

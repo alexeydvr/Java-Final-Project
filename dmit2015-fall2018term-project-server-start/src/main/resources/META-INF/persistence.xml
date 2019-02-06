@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence 
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1"
+>
+   <persistence-unit name="humanResourcePU">
+      <jta-data-source>java:jboss/datasources/OracleHumanResourcesDS</jta-data-source>
+      <class>dmit2015.hr.entity.Country</class>
+      <class>dmit2015.hr.entity.Department</class>
+      <class>dmit2015.hr.entity.Employee</class>
+      <class>dmit2015.hr.entity.Job</class>
+      <class>dmit2015.hr.entity.JobHistory</class>
+      <class>dmit2015.hr.entity.JobHistoryPK</class>
+      <class>dmit2015.hr.entity.Location</class>
+      <class>dmit2015.hr.entity.Region</class>
+      
+      <properties>
+         <!-- Properties for Hibernate -->
+         <property name="hibernate.show_sql" value="false" />
+      </properties>
+   </persistence-unit>
+</persistence>

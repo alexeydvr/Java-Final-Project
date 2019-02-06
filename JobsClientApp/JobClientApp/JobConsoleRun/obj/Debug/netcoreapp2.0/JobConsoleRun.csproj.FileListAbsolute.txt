@@ -1,0 +1,11 @@
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\bin\Debug\netcoreapp2.0\JobConsoleRun.deps.json
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\bin\Debug\netcoreapp2.0\JobConsoleRun.runtimeconfig.json
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\bin\Debug\netcoreapp2.0\JobConsoleRun.runtimeconfig.dev.json
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\bin\Debug\netcoreapp2.0\JobConsoleRun.dll
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\bin\Debug\netcoreapp2.0\JobConsoleRun.pdb
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\obj\Debug\netcoreapp2.0\JobConsoleRun.csproj.CoreCompileInputs.cache
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\obj\Debug\netcoreapp2.0\JobConsoleRun.AssemblyInfoInputs.cache
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\obj\Debug\netcoreapp2.0\JobConsoleRun.AssemblyInfo.cs
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\obj\Debug\netcoreapp2.0\JobConsoleRun.dll
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\obj\Debug\netcoreapp2.0\JobConsoleRun.pdb
+C:\Users\advorkin1\Documents\GitHub\dmit2015-private\JobsClientApp\JobClientApp\JobConsoleRun\obj\Debug\netcoreapp2.0\JobConsoleRun.csprojAssemblyReference.cache

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;HumanResourceServiceSoapBinding&quot; /&gt;" bindingType="basicHttpBinding" name="HumanResourceServiceSoapBinding" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://192.168.73.129:8080/dmit2015-fall2018term-assignment05-server-start/HumanResourceService&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;HumanResourceServiceSoapBinding&quot; contract=&quot;HumanResourceServiceReference.HumanResourceXmlWebService&quot; name=&quot;HumanResourcePort&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://192.168.73.129:8080/dmit2015-fall2018term-assignment05-server-start/HumanResourceService&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;HumanResourceServiceSoapBinding&quot; contract=&quot;HumanResourceServiceReference.HumanResourceXmlWebService&quot; name=&quot;HumanResourcePort&quot; /&gt;" contractName="HumanResourceServiceReference.HumanResourceXmlWebService" name="HumanResourcePort" />
+  </endpoints>
+</configurationSnapshot>

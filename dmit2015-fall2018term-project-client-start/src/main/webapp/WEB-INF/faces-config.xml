@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+	version="2.3"
+>
+	<application>
+		<locale-config>
+			<default-locale>en-US</default-locale>
+			<supported-locale>fr_CA</supported-locale>
+			<supported-locale>zh_CN</supported-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>dmit2015.hr.view.i18n.text</base-name>
+			<var>text</var>
+		</resource-bundle>		
+		<message-bundle>dmit2015.hr.view.i18n.messages</message-bundle>
+	</application>
+</faces-config>

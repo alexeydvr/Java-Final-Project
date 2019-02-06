@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://localhost/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="HumanResourceService" targetNamespace="http://localhost/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://localhost/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="luckyLottoNumber" type="tns:luckyLottoNumber" />
+      <xs:element name="luckyLottoNumberResponse" type="tns:luckyLottoNumberResponse" />
+      <xs:complexType name="luckyLottoNumber">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="luckyLottoNumberResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="luckyLottoNumberResponse">
+    <wsdl:part name="parameters" element="tns:luckyLottoNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="luckyLottoNumber">
+    <wsdl:part name="parameters" element="tns:luckyLottoNumber" />
+  </wsdl:message>
+  <wsdl:portType name="HumanResourceXmlWebService">
+    <wsdl:operation name="luckyLottoNumber">
+      <wsdl:input name="luckyLottoNumber" message="tns:luckyLottoNumber" />
+      <wsdl:output name="luckyLottoNumberResponse" message="tns:luckyLottoNumberResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HumanResourceServiceSoapBinding" type="tns:HumanResourceXmlWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="luckyLottoNumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="luckyLottoNumber">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="luckyLottoNumberResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HumanResourceService">
+    <wsdl:port name="HumanResourcePort" binding="tns:HumanResourceServiceSoapBinding">
+      <soap:address location="http://192.168.73.128:8080/dmit2015-fall2018term-assignment05-server-start/HumanResourceService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

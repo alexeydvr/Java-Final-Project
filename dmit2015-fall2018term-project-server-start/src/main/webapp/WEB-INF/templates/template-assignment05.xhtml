@@ -1,0 +1,122 @@
+<!DOCTYPE html >
+<html lang="#{activeLocale.languageTag}" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:f5="http://xmlns.jcp.org/jsf/passthrough" 	
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:p="http://primefaces.org/ui"  
+	xmlns:b="http://bootsfaces.net/ui">	
+
+<f:view locale="#{activeLocale.current}">
+
+<h:head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="${description}"/>
+    <meta name="keywords" content="${keywords}" />
+	<title>${title}</title>  
+			
+	<ui:insert name="externalstyles">
+	</ui:insert>
+	
+	<style>
+		<ui:insert name="internalstyles">	
+		</ui:insert>	
+	</style>
+</h:head>
+
+<h:body style="padding: 60px; min-height: 2000px;">
+
+    <b:navBar brand="#{text['assignment']} 3" brandHref="#{request.contextPath}/index.xhtml" fixed="top">
+    	<b:navbarLinks>        	
+        	<b:dropMenu value="#{text['query']}">
+            	<b:navLink value="#{text['page_viewOrderByOrderId.title']}" href="#{request.contextPath}/protected/query/viewOrderByOrderIdUsingComposition.xhtml"></b:navLink>
+            	<b:navLink value="#{text['page_viewOrderByDateRange.title']}" href="#{request.contextPath}/protected/query/viewOrderByDateRangeUsingComposition.xhtml"></b:navLink>
+            	<b:navLink value="#{text['page_viewOrderByCustomer.title']}" href="#{request.contextPath}/protected/query/viewOrderByCustomerUsingComposition.xhtml"></b:navLink>
+            	<b:navLink value="#{text['page_viewProductByPattern.title']}" href="#{request.contextPath}/protected/query/viewProductByPattern.xhtml"></b:navLink>
+        	</b:dropMenu>
+
+        	<b:dropMenu value="#{text['report']}">
+            	<b:navLink value="#{text['page_viewOnlineCatalogCategorySalesReport.title']}" href="#{request.contextPath}/protected/report/viewOnlineCatalogCategorySalesReport.xhtml"></b:navLink>
+            	<b:navLink value="#{text['page_viewCategorySalesReport.title']}" href="#{request.contextPath}/protected/report/viewCategorySalesReport.xhtml"></b:navLink>
+            	<b:navLink value="#{text['page_viewProductSalesReport.title']}" href="#{request.contextPath}/protected/report/viewProductSalesReport.xhtml"></b:navLink>
+        	</b:dropMenu>
+        	
+        </b:navbarLinks>
+        
+        <b:navbarLinks pull="right">
+        	<h:form style="display:inline" styleClass="form-inline">
+	       		<b:selectOneMenu id="langauges" 
+					label="#{text['language']}"
+					value="#{activeLocale.languageTag}"	>
+					<f:selectItems value="#{activeLocale.available}" 
+						var="lang"
+						itemLabel="#{lang.displayLanguage}" 
+						itemValue="#{lang.toLanguageTag()}" />						
+					<f:ajax listener="#{activeLocale.reload()}" />
+				</b:selectOneMenu>
+	        </h:form>
+	        
+	        <h:form style="display:inline" styleClass="form-inline">
+	          <b:selectOneMenu label="#{text['theme']}"
+	          	value="#{theme.currentTheme}" style="width:180px;margin-top:8px"
+	            onchange="$('.theme-selector-button').click()">
+	            <f:selectItem itemValue="default" itemLabel="default" />
+	            <f:selectItem itemValue="patternfly" itemLabel="patternfly" />
+	            <f:selectItem itemValue="cerulean" itemLabel="cerulean" />
+	            <f:selectItem itemValue="cosmo" itemLabel="cosmo" />
+	            <f:selectItem itemValue="cyborg" itemLabel="cyborg" />
+	            <f:selectItem itemValue="darkly" itemLabel="darkly" />
+	            <f:selectItem itemValue="flatly" itemLabel="flatly" />
+	            <f:selectItem itemValue="journal" itemLabel="journal" />
+	            <f:selectItem itemValue="lumen" itemLabel="lumen" />
+	            <f:selectItem itemValue="paper" itemLabel="paper" />
+	            <f:selectItem itemValue="readable" itemLabel="readable" />
+	            <f:selectItem itemValue="sandstone" itemLabel="sandstone" />
+	            <f:selectItem itemValue="simplex" itemLabel="simplex" />
+	            <f:selectItem itemValue="slate" itemLabel="slate" />
+	            <f:selectItem itemValue="spacelab" itemLabel="spacelab" />
+	            <f:selectItem itemValue="superhero" itemLabel="superhero" />
+	            <f:selectItem itemValue="united" itemLabel="united" />
+	            <f:selectItem itemValue="yeti" itemLabel="yeti" />
+	          </b:selectOneMenu>
+	          <b:commandButton class="theme-selector-button" value="select" action="#{theme.selectTheme}"
+	            style="display:none" />
+	        </h:form>
+		</b:navbarLinks>
+    </b:navBar>
+
+    <ui:insert name="maincontent"> 
+    	<b:container>
+     		NO MAIN CONTENT PROVIDED
+        </b:container>  
+    </ui:insert>
+    
+    <hr/>
+    <footer>
+    	<p>#{text['footer.this']}
+	 		<a href="https://javaee.github.io/tutorial/toc.html" target="_blanks">Java EE 8</a>
+	 		#{text['footer.built']}
+	 		<a href="http://www.eclipse.org/downloads/eclipse-packages/" target="_blanks">Eclipse IDE for Java EE Developers</a>, 
+	 		<a href="https://javaee.github.io/javaserverfaces-spec/" target="_blanks">JSF</a>,         		
+	 		<a href="https://www.bootsfaces.net/" target="_blanks">BootsFaces</a>, 
+	 		<a href="http://omnifaces.org/" target="_blanks">OmniFaces</a>,
+	 		<a href="http://primefaces.org/" target="_blanks">PrimeFaces</a>,
+	 		#{text['footer.runs']}
+	 		<a href="http://www.wildfly.org/" target="_blanks">WildFly</a>        		
+ 		</p>
+    </footer>
+                
+</h:body>
+
+</f:view>
+
+
+</html>
